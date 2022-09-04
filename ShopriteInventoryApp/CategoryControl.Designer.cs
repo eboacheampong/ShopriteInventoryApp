@@ -45,12 +45,12 @@
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.TextBox_Name = new Guna.UI2.WinForms.Guna2TextBox();
             this.add_button = new Guna.UI2.WinForms.Guna2Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.textBox_ID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.timePicker_category = new Guna.UI2.WinForms.Guna2DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -237,15 +237,6 @@
             this.add_button.Text = "ADD";
             this.add_button.Click += new System.EventHandler(this.add_button_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(39, 243);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(159, 32);
-            this.comboBox1.TabIndex = 43;
-            // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
@@ -310,17 +301,31 @@
             this.textBox_ID.Size = new System.Drawing.Size(119, 32);
             this.textBox_ID.TabIndex = 38;
             // 
+            // timePicker_category
+            // 
+            this.timePicker_category.Checked = true;
+            this.timePicker_category.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.timePicker_category.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.timePicker_category.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.timePicker_category.Location = new System.Drawing.Point(39, 243);
+            this.timePicker_category.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.timePicker_category.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.timePicker_category.Name = "timePicker_category";
+            this.timePicker_category.Size = new System.Drawing.Size(200, 36);
+            this.timePicker_category.TabIndex = 49;
+            this.timePicker_category.Value = new System.DateTime(2022, 9, 4, 2, 29, 53, 184);
+            // 
             // CategoryControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Controls.Add(this.timePicker_category);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.guna2HtmlLabel6);
             this.Controls.Add(this.TextBox_Name);
             this.Controls.Add(this.add_button);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.guna2HtmlLabel5);
             this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.guna2HtmlLabel2);
@@ -348,11 +353,11 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2TextBox TextBox_Name;
         private Guna.UI2.WinForms.Guna2Button add_button;
-        private System.Windows.Forms.ComboBox comboBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox textBox_ID;
+        private Guna.UI2.WinForms.Guna2DateTimePicker timePicker_category;
     }
 }
