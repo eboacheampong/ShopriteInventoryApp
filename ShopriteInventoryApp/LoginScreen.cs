@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,43 @@ namespace ShopriteInventoryApp
 
         private void Button_Login_Click(object sender, EventArgs e)
         {
+            DBConnect.open_connection();
+            MySqlCommand command;
+            if (TextBox_Username.Text != "" && TextBox_Password.Text != "")
+            {
+                try
+                {
+                    string query = "select * from user where username = '" + TextBox_Username.Text + "'&& password = '" + TextBox_Password.Text + "'";
+                    command = new MySqlCommand(query, DBConnect.connection);
+                    MySqlDataReader reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        this.Hide();
+                        reader.Close();
+                        MainForm mainform = new MainForm();
+                        this.Hide();
+                        mainform.Show();
 
+                    }
+                    else
+                    {
+                        reader.Close();
+                        MessageBox.Show("Incorrect credentials!!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    DBConnect.close_connection();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Fields cannot be empty");
+            }
         }
 
         private void Label_Exit_MouseEnter(object sender, EventArgs e)
