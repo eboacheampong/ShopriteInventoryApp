@@ -113,6 +113,16 @@ namespace ShopriteInventoryApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chart_graph {
+            get {
+                object obj = ResourceManager.GetObject("chart_graph", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap download {
             get {
                 object obj = ResourceManager.GetObject("download", resourceCulture);
@@ -136,6 +146,16 @@ namespace ShopriteInventoryApp.Properties {
         internal static System.Drawing.Bitmap download_white__1_ {
             get {
                 object obj = ResourceManager.GetObject("download_white__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap f9a8736c48cdaf40d3b9c1721c6f5161 {
+            get {
+                object obj = ResourceManager.GetObject("f9a8736c48cdaf40d3b9c1721c6f5161", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -167,6 +187,17 @@ namespace ShopriteInventoryApp.Properties {
         internal static System.Drawing.Bitmap hunter {
             get {
                 object obj = ResourceManager.GetObject("hunter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imgbin_casino_service_tax_money_sales_leisure_thin_money_xf2fP4RgKUyppmLaZGNtsDm9w_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("imgbin_casino_service_tax_money_sales_leisure_thin_money_xf2fP4RgKUyppmLaZGNtsDm9" +
+                        "w_removebg_preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -207,6 +238,16 @@ namespace ShopriteInventoryApp.Properties {
         internal static System.Drawing.Bitmap shoe {
             get {
                 object obj = ResourceManager.GetObject("shoe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transparent_handdrawn_doodle_red_x_close_icon_31631916723qjvbg7xy7u {
+            get {
+                object obj = ResourceManager.GetObject("transparent_handdrawn_doodle_red_x_close_icon_31631916723qjvbg7xy7u", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

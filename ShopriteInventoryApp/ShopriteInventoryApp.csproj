@@ -414,6 +414,18 @@
   <ItemGroup>
     <None Include="Resources\melissa-doug.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f9a8736c48cdaf40d3b9c1721c6f5161.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgbin-casino-service-tax-money-sales-leisure-thin-money-xf2fP4RgKUyppmLaZGNtsDm9w-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_graph.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent-handdrawn-doodle-red-x-close-icon-31631916723qjvbg7xy7u.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>(if exist "$(TargetDir)*old.pdb" del "$(TargetDir)*old.pdb") &amp; (if exist "$(TargetDir)*.pdb" ren "$(TargetDir)*.pdb" *.old.pdb)</PreBuildEvent>

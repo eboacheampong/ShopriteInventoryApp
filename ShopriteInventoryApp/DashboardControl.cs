@@ -22,6 +22,7 @@ namespace ShopriteInventoryApp
         }
         int progressStart1 = 0;
         int progressStart2 = 0;
+        int progressStart3 = 0;
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -39,6 +40,7 @@ namespace ShopriteInventoryApp
         {
             timer1.Start();
             timer2.Start();
+            timer3.Start();
         }
 
         private void guna2HtmlLabel1_Click(object sender, EventArgs e)
@@ -61,6 +63,28 @@ namespace ShopriteInventoryApp
                 timer2.Stop();
 
             }
+        }
+
+        private void guna2PictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            progressStart3 += 10;
+            ProgressBar3.Value = progressStart1;
+            if (ProgressBar3.Value == 50)
+            {
+                ProgressBar3.Value = 50;
+                timer3.Stop();
+
+            }
+        }
+
+        private void guna2PictureBox5_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
