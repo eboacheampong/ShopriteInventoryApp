@@ -16,5 +16,10 @@ namespace ShopriteInventoryApp
         {
             InitializeComponent();
         }
+
+        private void ReportControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

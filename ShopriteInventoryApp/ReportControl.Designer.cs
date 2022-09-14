@@ -64,6 +64,7 @@
             this.Controls.Add(this.guna2HtmlLabel6);
             this.Name = "ReportControl";
             this.Size = new System.Drawing.Size(817, 600);
+            this.Load += new System.EventHandler(this.ReportControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
