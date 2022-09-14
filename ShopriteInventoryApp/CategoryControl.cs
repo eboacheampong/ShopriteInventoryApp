@@ -22,7 +22,6 @@ namespace ShopriteInventoryApp
         public void Clear()
         {
             TextBox_Name.Clear();
-            textBox_ID.Clear();
             richTextBox1.Clear();
         }
 
@@ -60,7 +59,7 @@ namespace ShopriteInventoryApp
             while (dr.Read())
             {
                 i++;
-                guna2DataGridView1.Rows.Add(dr[0].ToString(), dr[2].ToString(), dr[1].ToString());
+                guna2DataGridView1.Rows.Add(dr[0].ToString(), dr[2].ToString(), dr[1].ToString(), dr[3].ToString());
             }
             dr.Close();
             DBConnect.close_connection
@@ -76,7 +75,7 @@ namespace ShopriteInventoryApp
         {
             try
             {
-                if (TextBox_Name.Text == "" || textBox_ID.Text == "" || richTextBox1.Text == "")
+                if (TextBox_Name.Text == ""  || richTextBox1.Text == "")
                 {
                     MessageBox.Show("Fields cannot be empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -106,11 +105,11 @@ namespace ShopriteInventoryApp
                     dr.Close();
                     if (!product_exits)
                     {
-                        query = "Insert into category(id, CategoryName, description) values(@textBox_ID,@TextBox_Name,@richTextBox1)";
+                        query = "Insert into category(id, CategoryName, description, Date) values(NULL,@TextBox_Name,@richTextBox1,@timePicker_category)";
                         command = new MySqlCommand(query, DBConnect.connection);
-                        command.Parameters.AddWithValue("@textBox_ID", textBox_ID);
                         command.Parameters.AddWithValue("@TextBox_Name", TextBox_Name.Text);
                         command.Parameters.AddWithValue("@richTextBox1", richTextBox1.Text);
+                        command.Parameters.AddWithValue("@timePicker_category", timePicker_category.Text);
                         command.ExecuteNonQuery();
                         MessageBox.Show("Account has be successfully created", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LoadCategory();

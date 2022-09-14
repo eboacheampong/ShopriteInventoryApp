@@ -24,7 +24,6 @@ namespace ShopriteInventoryApp
         public void Clear()
         {
             TextBox_Name.Clear();
-            textBox_ID.Clear();
             TextBox_Quantity.Clear();
             textBox_Price.Clear();
         }
@@ -81,7 +80,7 @@ namespace ShopriteInventoryApp
         {
             try
             {
-                if (TextBox_Name.Text == "" || comboBox1.Text == "" || textBox_ID.Text == "" || textBox_Price.Text == "" || TextBox_Quantity.Text == "")
+                if (TextBox_Name.Text == "" || comboBox1.Text == "" || textBox_Price.Text == "" || TextBox_Quantity.Text == "")
                 {
                     MessageBox.Show("Fields cannot be empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -111,9 +110,8 @@ namespace ShopriteInventoryApp
                     dr.Close();
                     if (!product_exits)
                     {
-                        query = "Insert into products(id,productName,category,quantity,price) values(@textBox_ID,@TextBox_Name,@comboBox1,@TextBox_Quantity,@textBox_Price )";
+                        query = "Insert into products(id,productName,category,quantity,price) values(NULL,@TextBox_Name,@comboBox1,@TextBox_Quantity,@textBox_Price )";
                         command = new MySqlCommand(query, DBConnect.connection);
-                        command.Parameters.AddWithValue("@textBox_ID", textBox_ID);
                         command.Parameters.AddWithValue("@TextBox_Name", TextBox_Name.Text);
                         command.Parameters.AddWithValue("@comboBox1", comboBox1.Text);
                         command.Parameters.AddWithValue("@TextBox_Quantity", TextBox_Quantity.Text);
@@ -131,6 +129,17 @@ namespace ShopriteInventoryApp
             {
                 MessageBox.Show(ex.Message, "Warning");
             }
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            comboBox1.Refresh();
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

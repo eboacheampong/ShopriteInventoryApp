@@ -50,11 +50,11 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.textBox_Price = new Guna.UI2.WinForms.Guna2TextBox();
             this.TextBox_Quantity = new Guna.UI2.WinForms.Guna2TextBox();
-            this.textBox_ID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2DataGridView1
@@ -214,7 +214,7 @@
             this.TextBox_Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextBox_Name.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextBox_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBox_Name.Location = new System.Drawing.Point(38, 183);
+            this.TextBox_Name.Location = new System.Drawing.Point(53, 117);
             this.TextBox_Name.Name = "TextBox_Name";
             this.TextBox_Name.PasswordChar = '\0';
             this.TextBox_Name.PlaceholderForeColor = System.Drawing.Color.Black;
@@ -247,6 +247,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(200, 32);
             this.comboBox1.TabIndex = 32;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // guna2HtmlLabel5
             // 
@@ -273,7 +274,7 @@
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(38, 221);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(53, 155);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(41, 22);
             this.guna2HtmlLabel3.TabIndex = 29;
@@ -283,21 +284,11 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(38, 155);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(53, 89);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(47, 19);
             this.guna2HtmlLabel2.TabIndex = 28;
             this.guna2HtmlLabel2.Text = "NAME";
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(38, 89);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(18, 22);
-            this.guna2HtmlLabel1.TabIndex = 27;
-            this.guna2HtmlLabel1.Text = "ID ";
             // 
             // textBox_Price
             // 
@@ -313,7 +304,7 @@
             this.textBox_Price.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBox_Price.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBox_Price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_Price.Location = new System.Drawing.Point(38, 249);
+            this.textBox_Price.Location = new System.Drawing.Point(53, 183);
             this.textBox_Price.Name = "textBox_Price";
             this.textBox_Price.PasswordChar = '\0';
             this.textBox_Price.PlaceholderForeColor = System.Drawing.Color.Black;
@@ -345,34 +336,24 @@
             this.TextBox_Quantity.Size = new System.Drawing.Size(167, 32);
             this.TextBox_Quantity.TabIndex = 25;
             // 
-            // textBox_ID
+            // guna2PictureBox1
             // 
-            this.textBox_ID.BackColor = System.Drawing.Color.Transparent;
-            this.textBox_ID.BorderColor = System.Drawing.Color.Transparent;
-            this.textBox_ID.BorderRadius = 5;
-            this.textBox_ID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox_ID.DefaultText = "";
-            this.textBox_ID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBox_ID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBox_ID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_ID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_ID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_ID.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textBox_ID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_ID.Location = new System.Drawing.Point(38, 117);
-            this.textBox_ID.Name = "textBox_ID";
-            this.textBox_ID.PasswordChar = '\0';
-            this.textBox_ID.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.textBox_ID.PlaceholderText = "";
-            this.textBox_ID.SelectedText = "";
-            this.textBox_ID.Size = new System.Drawing.Size(119, 32);
-            this.textBox_ID.TabIndex = 24;
+            this.guna2PictureBox1.Image = global::ShopriteInventoryApp.Properties.Resources._189687;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(589, 236);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(32, 40);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 37;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // ProductsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.guna2HtmlLabel6);
             this.Controls.Add(this.TextBox_Name);
@@ -382,13 +363,12 @@
             this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.guna2HtmlLabel2);
-            this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.textBox_Price);
             this.Controls.Add(this.TextBox_Quantity);
-            this.Controls.Add(this.textBox_ID);
             this.Name = "ProductsControl";
             this.Size = new System.Drawing.Size(817, 600);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -412,9 +392,8 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox textBox_Price;
         private Guna.UI2.WinForms.Guna2TextBox TextBox_Quantity;
-        private Guna.UI2.WinForms.Guna2TextBox textBox_ID;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

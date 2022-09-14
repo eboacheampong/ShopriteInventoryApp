@@ -46,5 +46,10 @@ namespace ShopriteInventoryApp
                 loginScreen.Show();
             }
         }
+
+        private void ProgressBar_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

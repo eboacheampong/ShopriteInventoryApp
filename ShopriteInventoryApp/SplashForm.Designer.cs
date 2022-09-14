@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.ProgressBar = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -49,27 +49,6 @@
             this.guna2HtmlLabel1.TabIndex = 2;
             this.guna2HtmlLabel1.Text = "SHOPRITE MANAGEMENT SYSTEM";
             this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::ShopriteInventoryApp.Properties.Resources.istockphoto_1320617333_170667a;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(337, 75);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(401, 329);
-            this.guna2PictureBox1.TabIndex = 5;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = global::ShopriteInventoryApp.Properties.Resources.banner_shop;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(12, 282);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(295, 153);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 6;
-            this.guna2PictureBox2.TabStop = false;
             // 
             // timer1
             // 
@@ -87,6 +66,28 @@
             this.ProgressBar.Size = new System.Drawing.Size(130, 130);
             this.ProgressBar.TabIndex = 7;
             this.ProgressBar.Text = "guna2CircleProgressBar1";
+            this.ProgressBar.ValueChanged += new System.EventHandler(this.ProgressBar_ValueChanged);
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Image = global::ShopriteInventoryApp.Properties.Resources.banner_shop;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(12, 282);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(295, 153);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 6;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::ShopriteInventoryApp.Properties.Resources.istockphoto_1320617333_170667a;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(337, 75);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(401, 329);
+            this.guna2PictureBox1.TabIndex = 5;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // SplashForm
             // 
@@ -102,8 +103,8 @@
             this.Name = "SplashForm";
             this.Text = "SplashForm";
             this.Load += new System.EventHandler(this.SplashForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

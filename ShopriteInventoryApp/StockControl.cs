@@ -79,7 +79,7 @@ namespace ShopriteInventoryApp
             while (dr.Read())
             {
                 i++;
-                guna2DataGridView1.Rows.Add(dr[0].ToString(), dr[2].ToString(), dr[4].ToString(), dr[3].ToString(), dr[1].ToString());
+                guna2DataGridView1.Rows.Add(dr[0].ToString(), dr[2].ToString(), dr[4].ToString(), dr[3].ToString(), dr[1].ToString(), dr[5].ToString());
             }
             dr.Close();
             DBConnect.close_connection
@@ -91,7 +91,7 @@ namespace ShopriteInventoryApp
 
             try
             {
-                if (comboBox2.Text == "" || comboBox1.Text == "" || textBox_Price.Text == "" || textBox_ID.Text == "")
+                if (comboBox2.Text == "" || comboBox1.Text == "" || textBox_Price.Text == "")
                 {
                     MessageBox.Show("Fields cannot be empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -121,13 +121,13 @@ namespace ShopriteInventoryApp
                     dr.Close();
                     if (!stock_exits)
                     {
-                        query = "Insert into stock(id,product,categoryName,quantity,attendantName) values(@textBox_ID,@comboBox2,@comboBox1,@textBox_Price,@comboBox3)";
+                        query = "Insert into stock(id,product,categoryName,quantity,attendantName,Date) values(NULL,@comboBox2,@comboBox1,@textBox_Price,@comboBox3,@dateTimePicker_stock)";
                         command = new MySqlCommand(query, DBConnect.connection);
-                        command.Parameters.AddWithValue("@textBox_ID", textBox_ID);
                         command.Parameters.AddWithValue("@comboBox2", comboBox2.Text);
                         command.Parameters.AddWithValue("@comboBox1", comboBox1.Text);
                         command.Parameters.AddWithValue("@textBox_Price", textBox_Price.Text);
                         command.Parameters.AddWithValue("@comboBox3", comboBox3.Text);
+                        command.Parameters.AddWithValue("@dateTimePicker_stock", dateTimePicker_stock.Text);
                         command.ExecuteNonQuery();
                         MessageBox.Show("Account has be successfully created", "Save Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Loadstock();

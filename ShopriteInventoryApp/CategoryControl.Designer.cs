@@ -36,21 +36,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.TextBox_Name = new Guna.UI2.WinForms.Guna2TextBox();
             this.add_button = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.textBox_ID = new Guna.UI2.WinForms.Guna2TextBox();
             this.timePicker_category = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,57 +134,6 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "NAME";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "DESCRIPTION";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "DATE";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.Column6.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column6.HeaderText = "EDIT";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Text = "EDIT";
-            // 
-            // Column7
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.Column7.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Column7.HeaderText = "DELETE";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Text = "DELETE";
-            // 
             // guna2HtmlLabel6
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
@@ -212,7 +159,7 @@
             this.TextBox_Name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextBox_Name.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextBox_Name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBox_Name.Location = new System.Drawing.Point(39, 184);
+            this.TextBox_Name.Location = new System.Drawing.Point(43, 116);
             this.TextBox_Name.Name = "TextBox_Name";
             this.TextBox_Name.PasswordChar = '\0';
             this.TextBox_Name.PlaceholderForeColor = System.Drawing.Color.Black;
@@ -241,7 +188,7 @@
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(39, 222);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(39, 170);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(40, 22);
             this.guna2HtmlLabel5.TabIndex = 42;
@@ -262,44 +209,11 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Lucida Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(39, 156);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(43, 88);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(47, 19);
             this.guna2HtmlLabel2.TabIndex = 40;
             this.guna2HtmlLabel2.Text = "NAME";
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(39, 90);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(18, 22);
-            this.guna2HtmlLabel1.TabIndex = 39;
-            this.guna2HtmlLabel1.Text = "ID ";
-            // 
-            // textBox_ID
-            // 
-            this.textBox_ID.BackColor = System.Drawing.Color.Transparent;
-            this.textBox_ID.BorderColor = System.Drawing.Color.Transparent;
-            this.textBox_ID.BorderRadius = 5;
-            this.textBox_ID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox_ID.DefaultText = "";
-            this.textBox_ID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBox_ID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBox_ID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_ID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBox_ID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_ID.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.textBox_ID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBox_ID.Location = new System.Drawing.Point(39, 118);
-            this.textBox_ID.Name = "textBox_ID";
-            this.textBox_ID.PasswordChar = '\0';
-            this.textBox_ID.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.textBox_ID.PlaceholderText = "";
-            this.textBox_ID.SelectedText = "";
-            this.textBox_ID.Size = new System.Drawing.Size(119, 32);
-            this.textBox_ID.TabIndex = 38;
             // 
             // timePicker_category
             // 
@@ -307,13 +221,65 @@
             this.timePicker_category.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.timePicker_category.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.timePicker_category.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.timePicker_category.Location = new System.Drawing.Point(39, 243);
+            this.timePicker_category.Location = new System.Drawing.Point(39, 191);
             this.timePicker_category.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.timePicker_category.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.timePicker_category.Name = "timePicker_category";
             this.timePicker_category.Size = new System.Drawing.Size(200, 36);
             this.timePicker_category.TabIndex = 49;
             this.timePicker_category.Value = new System.DateTime(2022, 9, 4, 2, 29, 53, 184);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "NAME";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "DESCRIPTION";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "DATE";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column6.HeaderText = "EDIT";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Text = "EDIT";
+            // 
+            // Column7
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.Column7.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Column7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Column7.HeaderText = "DELETE";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Text = "DELETE";
             // 
             // CategoryControl
             // 
@@ -329,8 +295,6 @@
             this.Controls.Add(this.guna2HtmlLabel5);
             this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.guna2HtmlLabel2);
-            this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.textBox_ID);
             this.Name = "CategoryControl";
             this.Size = new System.Drawing.Size(817, 600);
             this.Load += new System.EventHandler(this.CategoryControl_Load);
@@ -344,20 +308,18 @@
 
         private System.Windows.Forms.RichTextBox richTextBox1;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewButtonColumn Column6;
-        private System.Windows.Forms.DataGridViewButtonColumn Column7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2TextBox TextBox_Name;
         private Guna.UI2.WinForms.Guna2Button add_button;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2TextBox textBox_ID;
         private Guna.UI2.WinForms.Guna2DateTimePicker timePicker_category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewButtonColumn Column6;
+        private System.Windows.Forms.DataGridViewButtonColumn Column7;
     }
 }

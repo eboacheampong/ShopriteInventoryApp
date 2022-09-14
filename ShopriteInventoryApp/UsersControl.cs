@@ -29,7 +29,6 @@ namespace ShopriteInventoryApp
 
         public void Clear()
         {
-            textBox_ID.Clear();
             TextBox_Name.Clear();
             TextBox_Password.Clear();
             textBox_phone.Clear();
@@ -71,7 +70,7 @@ namespace ShopriteInventoryApp
             while (dr.Read())
             {
                 i++;
-                guna2DataGridView1.Rows.Add(dr[0].ToString(), dr[2].ToString(), dr[3].ToString(), dr[5].ToString(), dr[2].ToString());
+                guna2DataGridView1.Rows.Add(dr[0].ToString(), dr[2].ToString(), dr[3].ToString(), dr[1].ToString(), dr[5].ToString(), dr[6].ToString(), dr[5].ToString());
             }
             dr.Close();
             DBConnect.close_connection
@@ -122,9 +121,8 @@ namespace ShopriteInventoryApp
                     if (!user_exits)
                     {
                         string enc_pass = Encryption.HashString(TextBox_Password.Text);
-                        query = "Insert into user(id,fullName,Email,username,PhoneNumber,Password,Role) values(@textBox_ID,@TextBox_Name,@textBox_email,@textBox_username,@textBox_phone,@TextBox_Password,@comboBox_role)";
+                        query = "Insert into user(id,fullName,Email,username,PhoneNumber,Password,role) values(NULL,@TextBox_Name,@textBox_email,@textBox_username,@textBox_phone,@TextBox_Password,@comboBox_role)";
                         command = new MySqlCommand(query, DBConnect.connection);
-                        command.Parameters.AddWithValue("@textBox_ID", textBox_ID);
                         command.Parameters.AddWithValue("@TextBox_Name", TextBox_Name.Text);
                         command.Parameters.AddWithValue("@textBox_email", textBox_email.Text);
                         command.Parameters.AddWithValue("@textBox_username", textBox_username.Text);

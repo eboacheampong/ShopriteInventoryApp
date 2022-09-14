@@ -73,6 +73,36 @@ namespace ShopriteInventoryApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _189687 {
+            get {
+                object obj = ResourceManager.GetObject("_189687", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5501360 {
+            get {
+                object obj = ResourceManager.GetObject("_5501360", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _56286ef0395d9f330dec0d4797e19169 {
+            get {
+                object obj = ResourceManager.GetObject("_56286ef0395d9f330dec0d4797e19169", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap banner_shop {
             get {
                 object obj = ResourceManager.GetObject("banner_shop", resourceCulture);
@@ -93,9 +123,50 @@ namespace ShopriteInventoryApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap download_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("download_removebg_preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap download_white__1_ {
             get {
                 object obj = ResourceManager.GetObject("download_white__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap full_plastic_red_food_basket_isolated_grocery_products_flat_cartoon_316839_488 {
+            get {
+                object obj = ResourceManager.GetObject("full_plastic_red_food_basket_isolated_grocery_products_flat_cartoon_316839_488", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap full_plastic_red_food_basket_isolated_grocery_products_flat_cartoon_316839_488_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("full_plastic_red_food_basket_isolated_grocery_products_flat_cartoon_316839_488_re" +
+                        "movebg_preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hunter {
+            get {
+                object obj = ResourceManager.GetObject("hunter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +184,29 @@ namespace ShopriteInventoryApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap melissa_doug {
+            get {
+                object obj = ResourceManager.GetObject("melissa_doug", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shapesgif {
             get {
                 object obj = ResourceManager.GetObject("shapesgif", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shoe {
+            get {
+                object obj = ResourceManager.GetObject("shoe", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

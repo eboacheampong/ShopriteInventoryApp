@@ -28,10 +28,12 @@ namespace ShopriteInventoryApp
             username = "";
             full_Name = "";
             password = "";
+            phone = int.Parse("");
+            
            
 
             string connString;
-            connString = $"SERVER={server}; DATABASE={database}; USERNAME={username}; FULL_NAME={full_Name}; PASSWORD={password};";
+            connString = $"SERVER={server}; DATABASE={database}; USERNAME={username}; FULL_NAME={full_Name}; PASSWORD={password}; PHONE = {phone}";
 
             _connection = new MySqlConnection(connString);  
 
