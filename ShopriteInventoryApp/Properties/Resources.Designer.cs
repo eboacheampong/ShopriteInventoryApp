@@ -194,6 +194,16 @@ namespace ShopriteInventoryApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap images {
+            get {
+                object obj = ResourceManager.GetObject("images", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgbin_casino_service_tax_money_sales_leisure_thin_money_xf2fP4RgKUyppmLaZGNtsDm9w_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("imgbin_casino_service_tax_money_sales_leisure_thin_money_xf2fP4RgKUyppmLaZGNtsDm9" +
@@ -208,6 +218,16 @@ namespace ShopriteInventoryApp.Properties {
         internal static System.Drawing.Bitmap istockphoto_1320617333_170667a {
             get {
                 object obj = ResourceManager.GetObject("istockphoto_1320617333_170667a", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loop_gif {
+            get {
+                object obj = ResourceManager.GetObject("loop_gif", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
