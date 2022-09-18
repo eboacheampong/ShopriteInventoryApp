@@ -56,7 +56,9 @@ namespace ShopriteInventoryApp
             }
 
             return user_id;
+            
         }
+
         public void LoadUser()
         {
             int i = 0;

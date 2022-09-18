@@ -197,6 +197,7 @@ namespace ShopriteInventoryApp
                 bool product_exits = false;
 
                 query = "Select * from category where id = '" + TextBox_Id.Text + "'";
+                
                 command = new MySqlCommand(query, DBConnect.connection);
                 MySqlDataReader dr = command.ExecuteReader();
                 if (dr.HasRows && result == DialogResult.Yes)
@@ -217,6 +218,7 @@ namespace ShopriteInventoryApp
                 if (product_exits)
                 {
                     query = "DELETE FROM category WHERE `category`.`id` = @TextBox_Id";
+                    
                     command = new MySqlCommand(query, DBConnect.connection);
                     command.Parameters.AddWithValue("@TextBox_Id", TextBox_Id.Text);
                     command.ExecuteNonQuery();
