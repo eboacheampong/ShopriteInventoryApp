@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.button_report = new Guna.UI2.WinForms.Guna2Button();
             this.button_users = new Guna.UI2.WinForms.Guna2Button();
@@ -36,12 +38,15 @@
             this.button_categories = new Guna.UI2.WinForms.Guna2Button();
             this.button_products = new Guna.UI2.WinForms.Guna2Button();
             this.button_admin = new Guna.UI2.WinForms.Guna2Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ProgressBar_Logout = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.dashboardControl1 = new ShopriteInventoryApp.DashboardControl();
             this.productsControl1 = new ShopriteInventoryApp.ProductsControl();
             this.categoryControl1 = new ShopriteInventoryApp.CategoryControl();
             this.stockControl1 = new ShopriteInventoryApp.StockControl();
             this.usersControl1 = new ShopriteInventoryApp.UsersControl();
             this.reportControl1 = new ShopriteInventoryApp.ReportControl();
+            this.logoutControl1 = new ShopriteInventoryApp.LogoutControl();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +54,8 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.DarkCyan;
+            this.guna2Panel1.Controls.Add(this.ProgressBar_Logout);
+            this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.button_report);
             this.guna2Panel1.Controls.Add(this.button_users);
@@ -60,6 +67,22 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(183, 600);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.LavenderBlush;
+            this.guna2Button1.Location = new System.Drawing.Point(3, 561);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(175, 36);
+            this.guna2Button1.TabIndex = 7;
+            this.guna2Button1.Text = "Logout";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2PictureBox1
             // 
@@ -168,13 +191,34 @@
             this.button_admin.Text = "DASHBOARD";
             this.button_admin.Click += new System.EventHandler(this.button_admin_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // ProgressBar_Logout
+            // 
+            this.ProgressBar_Logout.FillColor = System.Drawing.Color.Transparent;
+            this.ProgressBar_Logout.FillThickness = 3;
+            this.ProgressBar_Logout.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ProgressBar_Logout.ForeColor = System.Drawing.Color.White;
+            this.ProgressBar_Logout.Location = new System.Drawing.Point(13, 565);
+            this.ProgressBar_Logout.Minimum = 0;
+            this.ProgressBar_Logout.Name = "ProgressBar_Logout";
+            this.ProgressBar_Logout.ProgressColor = System.Drawing.Color.Orange;
+            this.ProgressBar_Logout.ProgressColor2 = System.Drawing.Color.Orange;
+            this.ProgressBar_Logout.ProgressThickness = 3;
+            this.ProgressBar_Logout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.ProgressBar_Logout.Size = new System.Drawing.Size(32, 32);
+            this.ProgressBar_Logout.TabIndex = 8;
+            this.ProgressBar_Logout.Text = "guna2CircleProgressBar1";
+            // 
             // dashboardControl1
             // 
             this.dashboardControl1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.dashboardControl1.Location = new System.Drawing.Point(180, 0);
             this.dashboardControl1.Name = "dashboardControl1";
             this.dashboardControl1.Size = new System.Drawing.Size(817, 600);
-            this.dashboardControl1.TabIndex = 6;
+            this.dashboardControl1.TabIndex = 7;
             // 
             // productsControl1
             // 
@@ -182,7 +226,7 @@
             this.productsControl1.Location = new System.Drawing.Point(180, 0);
             this.productsControl1.Name = "productsControl1";
             this.productsControl1.Size = new System.Drawing.Size(817, 600);
-            this.productsControl1.TabIndex = 5;
+            this.productsControl1.TabIndex = 6;
             // 
             // categoryControl1
             // 
@@ -190,7 +234,7 @@
             this.categoryControl1.Location = new System.Drawing.Point(180, 0);
             this.categoryControl1.Name = "categoryControl1";
             this.categoryControl1.Size = new System.Drawing.Size(817, 600);
-            this.categoryControl1.TabIndex = 4;
+            this.categoryControl1.TabIndex = 5;
             // 
             // stockControl1
             // 
@@ -198,7 +242,7 @@
             this.stockControl1.Location = new System.Drawing.Point(180, 0);
             this.stockControl1.Name = "stockControl1";
             this.stockControl1.Size = new System.Drawing.Size(817, 600);
-            this.stockControl1.TabIndex = 3;
+            this.stockControl1.TabIndex = 4;
             // 
             // usersControl1
             // 
@@ -206,16 +250,23 @@
             this.usersControl1.Location = new System.Drawing.Point(180, 0);
             this.usersControl1.Name = "usersControl1";
             this.usersControl1.Size = new System.Drawing.Size(817, 600);
-            this.usersControl1.TabIndex = 2;
+            this.usersControl1.TabIndex = 3;
             // 
             // reportControl1
             // 
             this.reportControl1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.reportControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.reportControl1.Location = new System.Drawing.Point(183, 0);
+            this.reportControl1.Location = new System.Drawing.Point(180, 0);
             this.reportControl1.Name = "reportControl1";
             this.reportControl1.Size = new System.Drawing.Size(817, 600);
-            this.reportControl1.TabIndex = 1;
+            this.reportControl1.TabIndex = 2;
+            // 
+            // logoutControl1
+            // 
+            this.logoutControl1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.logoutControl1.Location = new System.Drawing.Point(180, 0);
+            this.logoutControl1.Name = "logoutControl1";
+            this.logoutControl1.Size = new System.Drawing.Size(817, 600);
+            this.logoutControl1.TabIndex = 1;
             // 
             // MainForm
             // 
@@ -229,6 +280,7 @@
             this.Controls.Add(this.stockControl1);
             this.Controls.Add(this.usersControl1);
             this.Controls.Add(this.reportControl1);
+            this.Controls.Add(this.logoutControl1);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
@@ -249,12 +301,16 @@
         private Guna.UI2.WinForms.Guna2Button button_categories;
         private Guna.UI2.WinForms.Guna2Button button_products;
         private Guna.UI2.WinForms.Guna2Button button_admin;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private LogoutControl logoutControl1;
         private ReportControl reportControl1;
         private UsersControl usersControl1;
         private StockControl stockControl1;
         private CategoryControl categoryControl1;
         private ProductsControl productsControl1;
         private DashboardControl dashboardControl1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Timer timer1;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar ProgressBar_Logout;
     }
 }

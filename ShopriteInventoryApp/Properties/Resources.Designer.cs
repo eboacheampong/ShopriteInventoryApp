@@ -225,6 +225,16 @@ namespace ShopriteInventoryApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pushing_cart {
+            get {
+                object obj = ResourceManager.GetObject("pushing_cart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shapesgif {
             get {
                 object obj = ResourceManager.GetObject("shapesgif", resourceCulture);

@@ -21,6 +21,7 @@ namespace ShopriteInventoryApp
             loadCategory();
             loadProduct();
             loaduser();
+            Loadstock();
         }
 
 
@@ -134,6 +135,111 @@ namespace ShopriteInventoryApp
 
 
                     }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning");
+            }
+        }
+
+        private void Update_button_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBox2.Text == "" || comboBox1.Text == "" || textBox_Price.Text == "")
+                {
+                    MessageBox.Show("Fields cannot be empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    DBConnect.open_connection();
+                    MySqlCommand command;
+                    command = new MySqlCommand();
+
+
+                    string query = "";
+                    bool product_exits = false;
+
+                    query = "Select * from stock where id = '" + TextBox_Id.Text + "'";
+                    command = new MySqlCommand(query, DBConnect.connection);
+                    MySqlDataReader dr = command.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        product_exits = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Stock ID not found");
+                        product_exits = false;
+                    }
+                    dr.Close();
+                    if (product_exits)
+                    {
+                        query = "UPDATE `stock` SET `attendantName` = @comboBox3, `product` = @comboBox2, `categoryName` = @comboBox1, `quantity` = @textBox_Price, `Date` = @dateTimePicker_stock WHERE `stock`.`id` = @TextBox_Id;";
+                        command = new MySqlCommand(query, DBConnect.connection);
+                        command.Parameters.AddWithValue("@TextBox_Id", TextBox_Id.Text);
+                        command.Parameters.AddWithValue("@comboBox2", comboBox2.Text);
+                        command.Parameters.AddWithValue("@comboBox1", comboBox1.Text);
+                        command.Parameters.AddWithValue("@textBox_Price", textBox_Price.Text);
+                        command.Parameters.AddWithValue("@comboBox3", comboBox3.Text);
+                        command.Parameters.AddWithValue("@dateTimePicker_stock", dateTimePicker_stock.Text);
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Update has been successfully done", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Loadstock();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning");
+            }
+        }
+
+        private void Delete_button_Click(object sender, EventArgs e)
+        {
+            string message = "Do you want Remove item?";
+            string title = "Remove item";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            try
+            {
+                DBConnect.open_connection();
+                MySqlCommand command;
+                command = new MySqlCommand();
+
+
+                string query = "";
+                bool product_exits = false;
+
+                query = "Select * from stock where id = '" + TextBox_Id.Text + "'";
+                command = new MySqlCommand(query, DBConnect.connection);
+                MySqlDataReader dr = command.ExecuteReader();
+                if (dr.HasRows && result == DialogResult.Yes)
+                {
+                    product_exits = true;
+                }
+                else if (result == DialogResult.No)
+                {
+                    MessageBox.Show("Remove stopped");
+                }
+
+                else
+                {
+                    MessageBox.Show("Stock ID not found");
+                    product_exits = false;
+                }
+                dr.Close();
+                if (product_exits)
+                {
+                    query = "DELETE FROM stock WHERE `stock`.`id` = @TextBox_Id";
+                    command = new MySqlCommand(query, DBConnect.connection);
+                    command.Parameters.AddWithValue("@TextBox_Id", TextBox_Id.Text);
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Delete has been successfully done", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Loadstock();
+
                 }
             }
             catch (Exception ex)

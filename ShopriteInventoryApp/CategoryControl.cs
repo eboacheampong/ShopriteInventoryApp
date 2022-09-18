@@ -124,6 +124,113 @@ namespace ShopriteInventoryApp
                 MessageBox.Show(ex.Message, "Warning");
             }
         }
+
+        private void Update_button_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TextBox_Name.Text == "" || richTextBox1.Text == "")
+                {
+                    MessageBox.Show("Input fields cannot be empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    DBConnect.open_connection();
+                    MySqlCommand command;
+                    command = new MySqlCommand();
+
+
+                    string query = "";
+                    bool product_exits = false;
+
+                    query = "Select * from category where id = '" + TextBox_Id.Text + "'";
+                    command = new MySqlCommand(query, DBConnect.connection);
+                    MySqlDataReader dr = command.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        product_exits = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Category ID not found");
+                        product_exits = false;
+                    }
+                    dr.Close();
+                    if (product_exits)
+                    {
+                        query = "UPDATE `category` SET `description` = @richTextBox1, `categoryName` = @TextBox_Name, `Date` = @timePicker_category,  WHERE `category`.`id` = @TextBox_Id;";
+                        command = new MySqlCommand(query, DBConnect.connection);
+                        command.Parameters.AddWithValue("@TextBox_Id", TextBox_Id.Text);
+                        command.Parameters.AddWithValue("@TextBox_Name", TextBox_Name.Text);
+                        command.Parameters.AddWithValue("@richTextBox1", richTextBox1.Text);
+                        command.Parameters.AddWithValue("@timePicker_category", timePicker_category.Text);
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Update has been successfully done", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadCategory();
+                        Clear();
+
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning");
+            }
+        }
+
+        private void Delete_button_Click(object sender, EventArgs e)
+        {
+            string message = "Do you want Remove item?";
+            string title = "Remove item";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            try
+            {
+                DBConnect.open_connection();
+                MySqlCommand command;
+                command = new MySqlCommand();
+
+
+                string query = "";
+                bool product_exits = false;
+
+                query = "Select * from category where id = '" + TextBox_Id.Text + "'";
+                command = new MySqlCommand(query, DBConnect.connection);
+                MySqlDataReader dr = command.ExecuteReader();
+                if (dr.HasRows && result == DialogResult.Yes)
+                {
+                    product_exits = true;
+                }
+                else if (result == DialogResult.No)
+                {
+                    MessageBox.Show("Remove stopped");
+                }
+
+                else
+                {
+                    MessageBox.Show("Category ID not found");
+                    product_exits = false;
+                }
+                dr.Close();
+                if (product_exits)
+                {
+                    query = "DELETE FROM category WHERE `category`.`id` = @TextBox_Id";
+                    command = new MySqlCommand(query, DBConnect.connection);
+                    command.Parameters.AddWithValue("@TextBox_Id", TextBox_Id.Text);
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Delete has been successfully done", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadCategory();
+                    Clear();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning");
+            }
+        }
     }
     
 }

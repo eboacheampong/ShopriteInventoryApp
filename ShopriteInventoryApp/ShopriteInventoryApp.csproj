@@ -262,6 +262,12 @@
     <Compile Include="LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogoutControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LogoutControl.Designer.cs">
+      <DependentUpon>LogoutControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogoutControl.resx">
+      <DependentUpon>LogoutControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -425,6 +434,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\transparent-handdrawn-doodle-red-x-close-icon-31631916723qjvbg7xy7u.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pushing cart.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

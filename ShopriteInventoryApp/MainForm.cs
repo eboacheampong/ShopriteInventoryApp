@@ -62,5 +62,58 @@ namespace ShopriteInventoryApp
             productsControl1.Visible = false;
             dashboardControl1.Visible = false;
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            string message = "Do you want Logout?";
+            string title = "Logout";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            if (result == DialogResult.Yes)
+            {
+                timer1.Start();
+                logoutControl1.Visible = true;
+                reportControl1.Visible = false;
+                usersControl1.Visible = false;
+                stockControl1.Visible = false;
+                categoryControl1.Visible = false;
+                productsControl1.Visible = false;
+                dashboardControl1.Visible = false;
+            }
+            else
+            {
+                dashboardControl1.Visible = true;
+                logoutControl1.Visible = false;
+                reportControl1.Visible = false;
+                usersControl1.Visible = false;
+                stockControl1.Visible = false;
+                categoryControl1.Visible = false;
+                productsControl1.Visible = false;
+            }
+            
+            
+            
+            
+        }
+        int progressStart = 0;
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            progressStart += 2;
+            ProgressBar_Logout.Value = progressStart;
+            if (ProgressBar_Logout.Value == 100)
+            {
+                ProgressBar_Logout.Value = 0;
+                timer1.Stop();
+                LoginScreen loginScreen = new LoginScreen();
+                this.Hide();
+                loginScreen.Show();
+            }
+        }
+
+        private void productsControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

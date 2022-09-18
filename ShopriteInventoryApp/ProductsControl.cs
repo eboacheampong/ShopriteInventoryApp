@@ -131,15 +131,118 @@ namespace ShopriteInventoryApp
             }
         }
 
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-            comboBox1.Refresh();
-
-        }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Update_button_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TextBox_Name.Text == "" || comboBox1.Text == "" || textBox_Price.Text == "" || TextBox_Quantity.Text == "")
+                {
+                    MessageBox.Show("Fields cannot be empty!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    DBConnect.open_connection();
+                    MySqlCommand command;
+                    command = new MySqlCommand();
+
+
+                    string query = "";
+                    bool product_exits = false;
+
+                    query = "Select * from products where id = '" + TextBox_Id.Text + "'";
+                    command = new MySqlCommand(query, DBConnect.connection);
+                    MySqlDataReader dr = command.ExecuteReader();
+                    if (dr.HasRows)
+                    {
+                        product_exits = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Product ID not found");
+                        product_exits = false;
+                    }
+                    dr.Close();
+                    if (product_exits)
+                    {
+                        query = "UPDATE `products` SET `category` = @comboBox1, `productName` = @TextBox_Name, `quantity` = @TextBox_Quantity, `price` = @textBox_Price WHERE `products`.`id` = @TextBox_Id;";
+                        command = new MySqlCommand(query, DBConnect.connection);
+                        command.Parameters.AddWithValue("@TextBox_Id", TextBox_Id.Text);
+                        command.Parameters.AddWithValue("@TextBox_Name", TextBox_Name.Text);
+                        command.Parameters.AddWithValue("@comboBox1", comboBox1.Text);
+                        command.Parameters.AddWithValue("@TextBox_Quantity", TextBox_Quantity.Text);
+                        command.Parameters.AddWithValue("@textBox_Price", textBox_Price.Text);
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Update has been successfully done", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadProduct();
+                        Clear();
+
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning");
+            }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            string message = "Do you want Remove item?";
+            string title = "Remove item";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons);
+            try
+            {
+                    DBConnect.open_connection();
+                    MySqlCommand command;
+                    command = new MySqlCommand();
+
+
+                    string query = "";
+                    bool product_exits = false;
+
+                    query = "Select * from products where id = '" + TextBox_Id.Text + "'";
+                    command = new MySqlCommand(query, DBConnect.connection);
+                    MySqlDataReader dr = command.ExecuteReader();
+                    if (dr.HasRows && result == DialogResult.Yes)
+                    {
+                        product_exits = true;
+                    }
+                    else if(result == DialogResult.No)
+                    {
+                        MessageBox.Show("Remove stopped");
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Product ID not found");
+                        product_exits = false;
+                    }
+                    dr.Close();
+                    if (product_exits)
+                    {
+                        query = "DELETE FROM products WHERE `products`.`id` = @TextBox_Id";
+                        command = new MySqlCommand(query, DBConnect.connection);
+                        command.Parameters.AddWithValue("@TextBox_Id", TextBox_Id.Text);
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Delete has been successfully done", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadProduct();
+                        Clear();
+
+                    }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Warning");
+            }
         }
     }
 }
