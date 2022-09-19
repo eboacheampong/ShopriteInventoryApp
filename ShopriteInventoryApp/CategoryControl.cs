@@ -159,7 +159,7 @@ namespace ShopriteInventoryApp
                     dr.Close();
                     if (product_exits)
                     {
-                        query = "UPDATE `category` SET `description` = @richTextBox1, `categoryName` = @TextBox_Name, `Date` = @timePicker_category,  WHERE `category`.`id` = @TextBox_Id;";
+                        query = "UPDATE `category` SET `description` = @richTextBox1, `categoryName` = @TextBox_Name, `Date` = @timePicker_category WHERE `category`.`id` = @TextBox_Id;";
                         command = new MySqlCommand(query, DBConnect.connection);
                         command.Parameters.AddWithValue("@TextBox_Id", TextBox_Id.Text);
                         command.Parameters.AddWithValue("@TextBox_Name", TextBox_Name.Text);
@@ -169,8 +169,6 @@ namespace ShopriteInventoryApp
                         MessageBox.Show("Update has been successfully done", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LoadCategory();
                         Clear();
-
-
                     }
                 }
             }

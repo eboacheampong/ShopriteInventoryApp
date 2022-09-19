@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.ProgressBar_Logout = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.button_report = new Guna.UI2.WinForms.Guna2Button();
@@ -39,7 +40,6 @@
             this.button_products = new Guna.UI2.WinForms.Guna2Button();
             this.button_admin = new Guna.UI2.WinForms.Guna2Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.ProgressBar_Logout = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.dashboardControl1 = new ShopriteInventoryApp.DashboardControl();
             this.productsControl1 = new ShopriteInventoryApp.ProductsControl();
             this.categoryControl1 = new ShopriteInventoryApp.CategoryControl();
@@ -67,6 +67,23 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(183, 600);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // ProgressBar_Logout
+            // 
+            this.ProgressBar_Logout.FillColor = System.Drawing.Color.Transparent;
+            this.ProgressBar_Logout.FillThickness = 3;
+            this.ProgressBar_Logout.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ProgressBar_Logout.ForeColor = System.Drawing.Color.White;
+            this.ProgressBar_Logout.Location = new System.Drawing.Point(13, 565);
+            this.ProgressBar_Logout.Minimum = 0;
+            this.ProgressBar_Logout.Name = "ProgressBar_Logout";
+            this.ProgressBar_Logout.ProgressColor = System.Drawing.Color.Orange;
+            this.ProgressBar_Logout.ProgressColor2 = System.Drawing.Color.Orange;
+            this.ProgressBar_Logout.ProgressThickness = 3;
+            this.ProgressBar_Logout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.ProgressBar_Logout.Size = new System.Drawing.Size(32, 32);
+            this.ProgressBar_Logout.TabIndex = 8;
+            this.ProgressBar_Logout.Text = "guna2CircleProgressBar1";
             // 
             // guna2Button1
             // 
@@ -194,23 +211,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // ProgressBar_Logout
-            // 
-            this.ProgressBar_Logout.FillColor = System.Drawing.Color.Transparent;
-            this.ProgressBar_Logout.FillThickness = 3;
-            this.ProgressBar_Logout.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.ProgressBar_Logout.ForeColor = System.Drawing.Color.White;
-            this.ProgressBar_Logout.Location = new System.Drawing.Point(13, 565);
-            this.ProgressBar_Logout.Minimum = 0;
-            this.ProgressBar_Logout.Name = "ProgressBar_Logout";
-            this.ProgressBar_Logout.ProgressColor = System.Drawing.Color.Orange;
-            this.ProgressBar_Logout.ProgressColor2 = System.Drawing.Color.Orange;
-            this.ProgressBar_Logout.ProgressThickness = 3;
-            this.ProgressBar_Logout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.ProgressBar_Logout.Size = new System.Drawing.Size(32, 32);
-            this.ProgressBar_Logout.TabIndex = 8;
-            this.ProgressBar_Logout.Text = "guna2CircleProgressBar1";
             // 
             // dashboardControl1
             // 

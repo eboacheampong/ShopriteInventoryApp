@@ -247,5 +247,10 @@ namespace ShopriteInventoryApp
                 MessageBox.Show(ex.Message, "Warning");
             }
         }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
